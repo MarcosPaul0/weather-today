@@ -4,7 +4,9 @@
 <p>É uma aplicação que apresenta o tempo em determinadas cidade situadas pelo mundo.</p>
 <p>Para isso foi utilizado a API do <a href="https://openweathermap.org">OpenWeatherMap</a>.</p>
 
-<img src="./template.png" />
+<div align="center">
+  <img src="./template.PNG" height="350px" />
+</div>
 
 <h2>Como executar</h2>
 
