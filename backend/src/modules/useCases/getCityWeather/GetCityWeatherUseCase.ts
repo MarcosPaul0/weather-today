@@ -16,6 +16,8 @@ export class GetCityWeatherUseCase {
   }
 
   async execute(city: string) {
-    await this.registerSearch(city)
+    const cityFormated = city.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1))
+
+    await this.registerSearch(cityFormated.join(' '))
   }
 }
