@@ -1,0 +1,32 @@
+.top-five {
+  grid-area: most-searched;
+  background: var(--white);
+  box-shadow: 1px 1px 6px var(--gray-semi-light);
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 3rem;
+
+  @media(max-width: 720px) {
+    width: 100%;
+  }
+
+  header {
+    color: var(--blue-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  hr {
+    opacity: 0.5;
+  }
+  
+  ul {
+    list-style: decimal;
+    color: var(--gray-dark);
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+  }
+}

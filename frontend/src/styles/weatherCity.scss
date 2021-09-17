@@ -1,0 +1,39 @@
+.container {
+  margin-top: 4rem;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  
+  width: 70%;
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  p {
+    color: var(--gray);
+  }
+  
+  .info {
+    display: flex;
+
+    img {
+      height: 8rem;
+    }
+
+    .temp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      strong {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .weather {
+    margin-top: 1.2rem;
+  }
+}

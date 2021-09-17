@@ -1,0 +1,19 @@
+.app {
+  height: 98%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.8fr 2fr 2fr;
+  grid-template-areas:
+  'header header'
+  'main most-searched'
+  'main last-searches';
+  gap: 1rem;
+
+  margin-left: 8rem;
+  margin-right: 8rem;
+
+  @media(max-width: 800px) {
+    margin: 0;
+    grid-template-columns: 2fr 1fr;
+  }
+}

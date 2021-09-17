@@ -1,0 +1,14 @@
+.header {
+  grid-area: header;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 1px 1px 6px var(--gray-semi-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
