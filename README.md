@@ -12,7 +12,7 @@
 
 <h3>Vamos começar com o backend (API Node)</h3>
 
-<p>Entre na pasta backend, edite o arquivo .env.example renomeando para apenas .env após isso informe os campos necessários, o nome do banco de dados postgres, seu usuários e sua senha. A API estará rodando na porta 3333.</p>
+<p>Entre na pasta backend, edite o arquivo .env.example renomeando para apenas .env após isso informe os campos necessários, o nome do banco de dados postgres (versão 10.18), seu usuários e sua senha. A API estará rodando na porta 3333.</p>
 <p>Agora execute os seguintes comandos em sequência:</p>
 
 <pre>yarn install</pre>
