@@ -6,6 +6,7 @@ import { WeatherCity } from './WeatherCity'
 
 import searchImg from '../assets/search.svg'
 import '../styles/main.scss';
+import { ToastContainer } from 'react-toastify'
 
 export function Main() {
   const [city, setCity] = useState('')
@@ -15,7 +16,6 @@ export function Main() {
 
   async function handleSearchWeather() {
     await getWeather(city)
-    console.log(weather)
     getLastSearches()
     getMostSearched()
   }
@@ -34,6 +34,7 @@ export function Main() {
         </button>
       </div>
       {Object.keys(weather).length === 0 ? '' : <WeatherCity weather={weather} /> }
+      <ToastContainer />
     </main>
   )
 }
