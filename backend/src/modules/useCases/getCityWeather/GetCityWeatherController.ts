@@ -7,12 +7,10 @@ export class GetCityWeatherController {
   async handle(req: Request, res: Response): Promise<Response> {
     const { city } = req.body
 
-    const weatherCity = await this.getCityWeatherUseCase.execute(city)
+    const result = await this.getCityWeatherUseCase.execute(city)
+      .then(() => res.status(200).json({success: 'Search registered!'}).send())
+      .catch(() => res.status(400).json({error: 'Search not registered!'}).send())
 
-    if(weatherCity.name === "Error") {
-      return res.status(404).json(weatherCity).send()
-    } else {
-      return res.json(weatherCity).send()
-    }
+    return result
   }
 }

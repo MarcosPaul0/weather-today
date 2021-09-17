@@ -1,6 +1,3 @@
-require('dotenv').config()
-import axios from 'axios'
-
 import { IHistoricRepository } from '../../repositories/IHistoricRepository'
 
 export class GetCityWeatherUseCase {
@@ -19,21 +16,6 @@ export class GetCityWeatherUseCase {
   }
 
   async execute(city: string) {
-    const weatherCity = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
-      params: {
-        q: city,
-        appid: process.env.OPENWEATHERMAP_KEY,
-        lang: 'pt_br',
-        units: 'metric'
-      }
-    })
-      .then(response => {
-        this.registerSearch(city)   
-
-        return response.data
-      })
-      .catch(err => err)
-
-    return weatherCity
+    await this.registerSearch(city)
   }
 }
