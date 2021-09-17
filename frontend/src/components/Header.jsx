@@ -1,5 +1,4 @@
 import '../styles/header.scss';
-
 import logoImg from '../assets/logo.svg'
 
 export function Header() {

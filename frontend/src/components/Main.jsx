@@ -15,6 +15,7 @@ export function Main() {
 
   async function handleSearchWeather() {
     await getWeather(city)
+    console.log(weather)
     getLastSearches()
     getMostSearched()
   }
@@ -32,7 +33,7 @@ export function Main() {
           <img src={searchImg} alt="Pesquisa" />
         </button>
       </div>
-      {weather.name ? <WeatherCity weather={weather} /> : ''}
+      {Object.keys(weather).length === 0 ? '' : <WeatherCity weather={weather} /> }
     </main>
   )
 }

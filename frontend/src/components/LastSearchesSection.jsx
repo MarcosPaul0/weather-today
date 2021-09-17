@@ -11,7 +11,6 @@ export function LastSearchesSection() {
       <hr></hr>
       <ul>
         {lastSearches.map(search => {
-          console.log(lastSearches)
           return (
             <li key={search.id}>{search.city}</li>
           )
