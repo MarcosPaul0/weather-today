@@ -23,26 +23,20 @@ export function useWeather() {
   }
 
   async function getWeather(city) {
-
-    try {
-      await axios.get('http://api.openweathermap.org/data/2.5/weather', {
-        params: {
-          q: city,
-          appid: process.env.REACT_APP_OPENWEATHERMAP_KEY,
-          lang: 'pt_br',
-          units: 'metric'
-        }
+    await axios.get('http://api.openweathermap.org/data/2.5/weather', {
+      params: {
+        q: city,
+        appid: process.env.REACT_APP_OPENWEATHERMAP_KEY,
+        lang: 'pt_br',
+        units: 'metric'
+      }
+    })
+      .then(async resp => {
+        setWeather(resp.data)
+        await axios.post('http://localhost:3333/weather', {city})
       })
-        .then(async resp => {
-          setWeather(resp.data)
-          await axios.post('http://localhost:3333/weather', {city})
-        })
-        .catch(() => errorNotify('Cidade não encontrada'))
-    } catch (error) {
-      throw error
-    }
+      .catch(() => errorNotify('Cidade não encontrada'))
   }
-
   return {
     weather,
     getWeather
