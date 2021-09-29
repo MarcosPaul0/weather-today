@@ -1,6 +1,6 @@
 <h1>Weather Today</h1>
 
-<h2>Pé visualização</h2>
+<h2>Pré visualização</h2>
 <p>É uma aplicação que apresenta o tempo em determinadas cidade situadas pelo mundo.</p>
 <p>Para isso foi utilizado a API do <a href="https://openweathermap.org">OpenWeatherMap</a>.</p>
 
